@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // ✅ Components -----------------------------------------------------------------------------------------
-// ✅ Icons -----------------------------------------------------------------------------------------------
+// ✅ Icons ----------------------------------------------------------------------------------------------
 import { HiMenuAlt3 } from "react-icons/hi";
 import { ImCross } from "react-icons/im";
 
@@ -31,11 +31,22 @@ const Header = () => {
             <div className="logo">
                 <img src="./Images/Logo.png" alt="" />
             </div>
-            <div className="navs hidden gap-8 font-open-sans-font font-medium md:flex lg:gap-12">
-                <p className="increase_letter_spacing">Home</p>
-                <p className="increase_letter_spacing">About Me</p>
-                <p className="increase_letter_spacing">Contact</p>
-                <p className="increase_letter_spacing">Services</p>
+            <div className="navs hidden h-full gap-8 font-open-sans-font font-medium md:flex md:gap-1">
+                <p className="increase_letter_spacing box-border flex h-full cursor-pointer items-center rounded-full border-white px-4 transition-all duration-150 hover:border-b-[3px]">
+                    Home
+                </p>
+                <p className="increase_letter_spacing box-border flex h-full cursor-pointer items-center rounded-full border-white px-4 transition-all duration-150 hover:border-b-[3px]">
+                    About Me
+                </p>
+                <p className="increase_letter_spacing box-border flex h-full cursor-pointer items-center rounded-full border-white px-4 transition-all duration-150 hover:border-b-[3px]">
+                    Skills
+                </p>
+                <p className="increase_letter_spacing box-border flex h-full cursor-pointer items-center rounded-full border-white px-4 transition-all duration-150 hover:border-b-[3px]">
+                    Projects
+                </p>
+                <p className="increase_letter_spacing box-border flex h-full cursor-pointer items-center rounded-full border-white px-4 transition-all duration-150 hover:border-b-[3px]">
+                    Contact
+                </p>
             </div>
 
             <div className="block md:hidden">
@@ -46,7 +57,7 @@ const Header = () => {
                             closeMenu && "slide-out-right"
                         }`}
                     >
-                        <div className="flex h-14 w-full items-center justify-end px-5 text-white">
+                        <div className="flex h-14 w-full items-center justify-end px-7 text-white">
                             <ImCross className="text-2xl" onClick={handleCloseMenuOnMobile} />
                         </div>
                         <div className="navs_links box-border flex h-full flex-col items-center gap-12 pt-14 text-4xl font-semibold text-white">

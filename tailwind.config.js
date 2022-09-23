@@ -41,7 +41,7 @@ module.exports = {
         },
         extend: {
             boxShadow: {
-                "primary-shadow": "0px 4px 4px 0px rgba(134, 104, 253, .5)",
+                "primary-shadow": "5px 5px 14px -4px #000000a3",
             },
             fontFamily: {
                 "open-sans-font": ["Open Sans", "sans-serif"],
