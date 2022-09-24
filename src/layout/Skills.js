@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
 import SingleSkill from "../components/SingleSkill";
 
+// ✅ Data ------------------------------------------------------------------------------------------------------------
 import skillsArray from "./../data/skills";
+import myInformation from "../data/myInformation";
+
 const Skills = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    useEffect(() => {
+        document.title = `${myInformation.aboutSection.iAmWhat} | Skills`;
+    }, []);
     return (
         <div
             className={`section_background_gradient box-border flex w-full flex-col items-center px-8 pb-20 pt-16 sm:px-12 md:flex-col lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}

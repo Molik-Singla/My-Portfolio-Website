@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
 
+// ✅ Data ------------------------------------------------------------------------------------------------------------
+import myInformation from "../data/myInformation";
+
 const Contact = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    useEffect(() => {
+        document.title = `${myInformation.aboutSection.iAmWhat} | Contact`;
+    }, []);
     return (
         <div
             className={`section_background_gradient box-border flex h-auto w-full flex-col items-center px-8 pt-16 pb-10 sm:px-12 md:flex-col lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}
@@ -16,7 +24,7 @@ const Contact = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) =>
                 <div className="box-border flex h-full w-full flex-col items-center gap-6 rounded-lg px-6 transition-all duration-300 md:w-1/2 md:gap-7 md:px-10">
                     <form
                         className="box-border flex h-full w-full flex-col items-center gap-6 "
-                        action="https://formspree.io/f/xjvzwwzl"
+                        action={myInformation.contactSection.formpreeWebsiteAPIKey}
                         method="POST"
                     >
                         <input
@@ -44,7 +52,7 @@ const Contact = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) =>
                             required
                         ></textarea>
                         <div className="mt-2 flex w-full justify-end">
-                            <button className="rounded-md bg-secondary-color px-8 py-2 font-rubik-font font-semibold text-white transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90 md:py-1">
+                            <button className="animate_button_main rounded-md bg-secondary-color px-9 py-2 font-rubik-font font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-[2px] hover:border hover:border-secondary-color hover:opacity-90 md:py-2">
                                 Submit
                             </button>
                         </div>

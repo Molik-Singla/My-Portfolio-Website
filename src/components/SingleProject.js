@@ -1,5 +1,6 @@
 import React from "react";
 
+// ✅ Icons------------------------------------------------------------------------------------------------------------
 import { ImGithub } from "react-icons/im";
 
 const SingleProject = ({ image, projectTitle, projectDescription, githubLink = null, demoLink = null }) => {
@@ -19,9 +20,9 @@ const SingleProject = ({ image, projectTitle, projectDescription, githubLink = n
                 </a>
 
                 <a className={`${!demoLink && "hover:cursor-not-allowed"}`} href={demoLink} target="_blank">
-                    <div className="flex h-9 items-center justify-center rounded-md bg-tertiary-color px-5 font-rubik-font font-semibold text-black shadow-lg shadow-gray-200 transition-all duration-200 hover:-translate-y-[2px]">
+                    <button className="animate_button_main flex h-9 items-center justify-center rounded-md bg-tertiary-color px-5 font-rubik-font font-semibold text-black shadow-lg shadow-gray-200 hover:border hover:border-secondary-color">
                         Demo
-                    </div>
+                    </button>
                 </a>
             </div>
         </div>

@@ -10,6 +10,7 @@ import Project from "./layout/Project";
 import Contact from "./layout/Contact";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ErrorPage from "./layout/ErrorPage";
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path="skill" element={<Skills paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
                 <Route path="project" element={<Project paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
                 <Route path="contact" element={<Contact paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
             <Footer />
         </BrowserRouter>

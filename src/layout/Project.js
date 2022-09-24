@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
 import SingleProject from "../components/SingleProject";
 
+// ✅ Data ------------------------------------------------------------------------------------------------------------
 import allMyProjects from "./../data/projects";
+import myInformation from "../data/myInformation";
 
 const Project = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    useEffect(() => {
+        document.title = `${myInformation.aboutSection.iAmWhat} | Projects`;
+    }, []);
     return (
         <div
             className={`box-border flex h-full w-full flex-col px-8 pt-16 pb-20 sm:px-12 md:h-auto lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}

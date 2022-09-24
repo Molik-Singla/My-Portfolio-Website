@@ -35,7 +35,7 @@ const Header = () => {
                 <div className="logo">
                     <img src="./Images/Logo.png" alt="" />
                 </div>
-                <div className="navs hidden h-full gap-8 font-open-sans-font font-medium md:flex md:gap-1">
+                <div className="navs hidden h-full gap-8 font-open-sans-font text-lg font-medium md:flex md:gap-1">
                     <SingleHeaderNavItem toLink={"/"} headerItemName="Home" />
                     <SingleHeaderNavItem toLink={"about"} headerItemName="About Me" />
                     <SingleHeaderNavItem toLink={"skill"} headerItemName="Skills" />
@@ -56,27 +56,42 @@ const Header = () => {
                             </div>
                             <div className="navs_links box-border flex h-full flex-col items-center gap-10 pt-10 text-3xl font-semibold text-white">
                                 <NavLink to={"/"}>
-                                    <button onClick={handleCloseMenuOnMobile} className={`${openMenuOnMobile && "slide-in-right-4s"}`}>
+                                    <button
+                                        onClick={handleCloseMenuOnMobile}
+                                        className={`animate_bottom_border ${openMenuOnMobile && "slide-in-right-4s"}`}
+                                    >
                                         Home
                                     </button>
                                 </NavLink>
                                 <NavLink to={"about"}>
-                                    <button onClick={handleCloseMenuOnMobile} className={`${openMenuOnMobile && "slide-in-right-5s"}`}>
+                                    <button
+                                        onClick={handleCloseMenuOnMobile}
+                                        className={`animate_bottom_border ${openMenuOnMobile && "slide-in-right-5s"}`}
+                                    >
                                         About Me
                                     </button>
                                 </NavLink>
                                 <NavLink to={"skill"}>
-                                    <button onClick={handleCloseMenuOnMobile} className={`${openMenuOnMobile && "slide-in-right-6s"}`}>
+                                    <button
+                                        onClick={handleCloseMenuOnMobile}
+                                        className={`animate_bottom_border ${openMenuOnMobile && "slide-in-right-6s"}`}
+                                    >
                                         Skills
                                     </button>
                                 </NavLink>
                                 <NavLink to={"project"}>
-                                    <button onClick={handleCloseMenuOnMobile} className={`${openMenuOnMobile && "slide-in-right-7s"}`}>
+                                    <button
+                                        onClick={handleCloseMenuOnMobile}
+                                        className={`animate_bottom_border ${openMenuOnMobile && "slide-in-right-7s"}`}
+                                    >
                                         Projects
                                     </button>
                                 </NavLink>
                                 <NavLink to={"contact"}>
-                                    <button onClick={handleCloseMenuOnMobile} className={`${openMenuOnMobile && "slide-in-right-8s"}`}>
+                                    <button
+                                        onClick={handleCloseMenuOnMobile}
+                                        className={`animate_bottom_border ${openMenuOnMobile && "slide-in-right-8s"}`}
+                                    >
                                         Contact
                                     </button>
                                 </NavLink>

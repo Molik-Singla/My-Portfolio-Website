@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+// ✅ Components ------------------------------------------------------------------------------------------------------------
 import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
 import Project from "./Project";
 import Skills from "./Skills";
 
-import { Outlet } from "react-router-dom";
+// ✅ Data ------------------------------------------------------------------------------------------------------------
+import myInformation from "../data/myInformation";
 
 const Home = () => {
+    useEffect(() => {
+        document.title = `${myInformation.aboutSection.iAmWhat} | Home`;
+    }, []);
     return (
         <>
             <Hero />

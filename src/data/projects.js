@@ -16,7 +16,7 @@ const allMyProjects = [
     {
         image: "./Images/Projects/project-3.png",
         title: "Facebook ( UI Only )",
-        description: "Make an Facebook UI Clone with my mate Prince Verma using HTML and CSS",
+        description: " Make an Facebook UI Clone with my mate Prince Verma using HTML and CSS",
         githubLink: "https://princeverma-ai.github.io/clone-facebook/",
         demoLink: "https://webflow-official.netlify.app/",
     },

@@ -139,6 +139,77 @@
     width: 100%;
 
     transition: all;
-    transition-duration: 0.2s;
+    transition-duration: 0.4s;
 
+}
+
+
+/* .btn {
+    text-decoration: none;
+    position: relative;
+    transition: all .30s;
+}
+
+.btn_in{
+    position: relative;
+    z-index: 2;
+}
+
+.btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: all .35s;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    color: #172B4D;
+    /* font-weight: 500; 
+
+}
+
+.btn:hover:after {
+    width: 100%;
+} */
+
+
+/* ✅ Button Animation ------------------------------------------------------------------------------------------------------------------------- */
+.animate_button_main {
+    border-color: white;
+
+    background-image: linear-gradient(45deg, white 50%, transparent 50%);
+    background-position  : 100%;
+    background-size: 400%;
+    
+    transition: background 300ms linear;
+}
+.animate_button_main:hover{
+    background-position: 0;
+    color: #172B4D;
+}
+
+.animate_bottom_border {
+    cursor: pointer;
+    position: relative;
+}
+
+.animate_bottom_border:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: white;
+    left: 45%;
+    height: 4px;
+    bottom: 0;
+    transition: all .5s;
+}
+
+.animate_bottom_border:hover:before {
+    width: 100%;
+    left: 0;
 }
