@@ -3,9 +3,11 @@ import SectionTitle from "../components/SectionTitle";
 import SingleSkill from "../components/SingleSkill";
 
 import skillsArray from "./../data/skills";
-const Skills = () => {
+const Skills = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
     return (
-        <div className="section_background_gradient box-border flex w-full flex-col items-center px-8 pb-20 pt-10 sm:px-12 md:h-auto md:flex-col lg:px-16">
+        <div
+            className={`section_background_gradient box-border flex w-full flex-col items-center px-8 pb-20 pt-16 sm:px-12 md:flex-col lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}
+        >
             <div className="flex w-full flex-col items-center gap-4 text-white">
                 <SectionTitle title={"Skills &,Abilities"} />
             </div>

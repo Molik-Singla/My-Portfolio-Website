@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ✅ Scroll Bar -------------------------------------------------------------------------------- */
+/* ✅ Scroll Bar ---------------------------------------------------------------------------------------------------------------- */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -16,7 +16,7 @@
     border-radius: 40px;
 }
 
-/* ✅ Main Gradient ------------------------------------------------------------------ */
+/* ✅ Main Gradient ------------------------------------------------------------------------------------------------------------- */
 .bg_gradient {
     background: linear-gradient(16deg, rgba(17, 164, 239, 1) 0%, rgba(17, 190, 239, 1) 31%);
 }
@@ -32,7 +32,7 @@
 
 
 
-/* ✅ Menu Animations --------------------------------------------------------------------- */
+/* ✅ Menu Animations ---------------------------------------------------------------------------------------------------------------- */
 .slide-in-right {
     -webkit-animation: slide-in-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -99,7 +99,7 @@
     }
 }
 
-/* ✅ Text Animations -------------------------------------------------------------------------------------------------- */
+/* ✅ Text Animations ---------------------------------------------------------------------------------------------------------------- */
 .slide-in-right-4s {
     -webkit-animation: slide-in-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -119,4 +119,26 @@
     -webkit-animation: slide-in-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+.slide-in-right-8s {
+    -webkit-animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
+
+/* ✅ Button Animation ------------------------------------------------------------------------------------------------------------------------- */
+.button_animate{
+    position: relative;
+}
+.button_animate:hover > span{
+    position: absolute;
+
+    height: 3px;
+    background-color: white;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+
+    transition: all;
+    transition-duration: 0.2s;
+
+}

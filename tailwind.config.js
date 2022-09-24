@@ -51,6 +51,7 @@ module.exports = {
             colors: {
                 "primary-gradient": "linear-gradient(16deg, rgba(17,164,239,1) 0%, rgba(17,190,239,1) 51%)",
                 "primary-color": "rgb(17,149,239)",
+                // "primary-color": "#E5ECFB",
 
                 "secondary-color": "#172B4D",
                 "tertiary-color": "#FFD900",

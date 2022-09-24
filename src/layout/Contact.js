@@ -1,48 +1,54 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
 
-const Contact = () => {
+const Contact = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
     return (
-        <div className="section_background_gradient box-border flex h-auto w-full flex-col items-center px-8 pt-10 sm:px-12 md:flex-col lg:px-16">
+        <div
+            className={`section_background_gradient box-border flex h-auto w-full flex-col items-center px-8 pt-16 pb-10 sm:px-12 md:flex-col lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}
+        >
             <SectionTitle title={"Contact with,Me"} />
 
-            <div className="flex h-full w-full flex-col md:flex-row ">
-                <div className="hidden h-1/2 w-full md:block md:w-1/2">
-                    <lottie-player
-                        src="https://assets1.lottiefiles.com/packages/lf20_mwawjro9.json"
-                        background="transparent"
-                        speed="0.8"
-                        style={{ width: "80%", height: "80%" }}
-                        loop
-                        autoplay
-                    ></lottie-player>
+            <div className="mt-5 flex h-full w-full flex-col rounded-lg bg-[rgba(255,255,255,0.3)] pt-10 pb-6 md:flex-row md:pt-14">
+                <div className="hidden h-full w-full items-center justify-center md:flex md:h-full md:w-1/2">
+                    <img className="w-[50%] min-w-[220px]" src="./Images/Contact/contact-1.png" alt="" />
                 </div>
-                <div className="mt-10 box-border flex h-full w-full flex-col items-center gap-6 rounded-lg bg-[rgba(255,255,255,0.28)] py-10 transition-all duration-300 hover:-translate-y-[2px] hover:bg-[rgba(255,255,255,0.4)] md:w-1/2 md:gap-7">
-                    <input
-                        className="h-8 w-4/5 rounded-md bg-[rgba(255,255,255,0.6)] pl-5 font-open-sans-font outline-none placeholder:text-sm placeholder:font-semibold placeholder:text-secondary-color md:w-2/3"
-                        placeholder="Name"
-                        type="text"
-                        name=""
-                        id=""
-                    />
-                    <input
-                        className="h-8 w-4/5 rounded-md bg-[rgba(255,255,255,0.6)] pl-5 font-open-sans-font outline-none placeholder:text-sm placeholder:font-semibold placeholder:text-secondary-color md:w-2/3"
-                        placeholder="Email"
-                        type="email"
-                        name=""
-                        id=""
-                    />
-                    <textarea
-                        className="w-4/5 rounded-md bg-[rgba(255,255,255,0.6)] py-4 pl-5 font-open-sans-font outline-none placeholder:text-sm placeholder:font-semibold placeholder:text-secondary-color md:w-2/3"
-                        placeholder="Message..."
-                        cols="30"
-                        rows="2"
-                    ></textarea>
-                    <div className="mt-2 flex w-4/5 justify-end md:w-2/3">
-                        <button className="rounded-md bg-secondary-color px-8 py-2 font-rubik-font font-semibold text-white transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90 md:py-1">
-                            Submit
-                        </button>
-                    </div>
+
+                <div className="box-border flex h-full w-full flex-col items-center gap-6 rounded-lg px-6 transition-all duration-300 md:w-1/2 md:gap-7 md:px-10">
+                    <form
+                        className="box-border flex h-full w-full flex-col items-center gap-6 "
+                        action="https://formspree.io/f/xjvzwwzl"
+                        method="POST"
+                    >
+                        <input
+                            className="h-10 w-full rounded-md border border-secondary-color bg-[rgba(255,255,255,0.6)] pl-5 font-open-sans-font outline-none placeholder:text-sm placeholder:font-medium placeholder:text-secondary-color focus:bg-[rgba(255,255,255,0.8)]"
+                            placeholder="Name"
+                            type="text"
+                            name="name"
+                            autoComplete="off"
+                            required
+                        />
+                        <input
+                            className="h-10 w-full rounded-md border border-secondary-color bg-[rgba(255,255,255,0.6)] pl-5 font-open-sans-font outline-none placeholder:text-sm placeholder:font-medium placeholder:text-secondary-color focus:bg-[rgba(255,255,255,0.8)]"
+                            placeholder="Email"
+                            type="email"
+                            name="email"
+                            autoComplete="off"
+                            required
+                        />
+                        <textarea
+                            className="w-full rounded-md border border-secondary-color bg-[rgba(255,255,255,0.6)] py-4 pl-5 font-open-sans-font outline-none placeholder:text-sm placeholder:font-medium placeholder:text-secondary-color focus:bg-[rgba(255,255,255,0.8)]"
+                            placeholder="Message..."
+                            cols="30"
+                            rows="4"
+                            name="message"
+                            required
+                        ></textarea>
+                        <div className="mt-2 flex w-full justify-end">
+                            <button className="rounded-md bg-secondary-color px-8 py-2 font-rubik-font font-semibold text-white transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90 md:py-1">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

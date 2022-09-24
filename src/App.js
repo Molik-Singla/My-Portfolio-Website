@@ -1,23 +1,29 @@
 import React from "react";
-import About from "./layout/About";
-import Contact from "./layout/Contact";
+
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
+
 import Home from "./layout/Home";
-import Project from "./layout/Project";
+import About from "./layout/About";
 import Skills from "./layout/Skills";
+import Project from "./layout/Project";
+import Contact from "./layout/Contact";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
     return (
-        <div>
+        <BrowserRouter>
             <Header />
-            <Home />
-            <About />
-            <Skills />
-            <Project />
-            <Contact />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="about" element={<About paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
+                <Route path="skill" element={<Skills paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
+                <Route path="project" element={<Project paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
+                <Route path="contact" element={<Contact paddingTopToDiffer={"pt-16"} heightToDiffer="h-auto min-h-screen" />} />
+            </Routes>
             <Footer />
-        </div>
+        </BrowserRouter>
     );
 };
 

@@ -4,9 +4,11 @@ import SingleProject from "../components/SingleProject";
 
 import allMyProjects from "./../data/projects";
 
-const Project = () => {
+const Project = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
     return (
-        <div className="box-border flex h-full w-full flex-col px-8 pt-10 pb-20 sm:px-12 md:h-auto lg:px-16">
+        <div
+            className={`box-border flex h-full w-full flex-col px-8 pt-16 pb-20 sm:px-12 md:h-auto lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}
+        >
             <div className="flex w-full flex-col items-center gap-4 text-white">
                 <SectionTitle title={"Projects,Made"} />
             </div>
