@@ -2,7 +2,7 @@ const allMyProjects = [
     {
         image: "./Images/Projects/project-1.PNG",
         title: "Instagram Clone",
-        description: "A web app for improving online communication experience of us",
+        description: " A web app for improving online communication experience of us",
         githubLink: "",
         demoLink: "https://instagramfullstack.herokuapp.com",
     },
@@ -26,6 +26,13 @@ const allMyProjects = [
         description: "E-Commerce Website make using Javascript",
         githubLink: "https://github.com/Molik-Singla/E-Commerce-Website",
         demoLink: "",
+    },
+    {
+        image: "./Images/Projects/project-5.PNG",
+        title: "Signup Form with Validation",
+        description: "Signup Form with Form Validation and Beautifull Design",
+        githubLink: "https://github.com/Molik-Singla/Sign-up-Validation-Page",
+        demoLink: "https://molik-singla.github.io/Sign-up-Validation-Page/",
     },
 ];
 

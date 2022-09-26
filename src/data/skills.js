@@ -11,6 +11,7 @@ const skillsArray = [
     { image: "./Images/Skills/skill-10.png", skillName: "C++" },
     { image: "./Images/Skills/skill-11.png", skillName: "Github" },
     { image: "./Images/Skills/skill-12.png", skillName: "Netlify" },
+    { image: "./Images/Skills/skill-13.png", skillName: "Git VCS" },
 ];
 
 export default skillsArray;
