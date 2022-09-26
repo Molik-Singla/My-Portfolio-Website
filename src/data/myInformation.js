@@ -6,10 +6,10 @@ const myInformation = {
         },
         iAmAWhat: ["Full Stack Web Developer", "MERN Stack Developer"],
         socialLinks: {
-            instaLink: "",
-            githubLink: "",
+            instaLink: "https://www.instagram.com/singlamolik/",
+            githubLink: "https://github.com/Molik-Singla",
             fbLink: "",
-            linkedinLink: "",
+            linkedinLink: "https://www.linkedin.com/in/molik-singla-604381224/",
         },
     },
     aboutSection: {

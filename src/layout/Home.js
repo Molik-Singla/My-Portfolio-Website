@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 // ✅ Components ------------------------------------------------------------------------------------------------------------
 import About from "./About";
@@ -9,9 +9,12 @@ import Skills from "./Skills";
 
 // ✅ Data ------------------------------------------------------------------------------------------------------------
 import myInformation from "../data/myInformation";
+import { GlobalContext } from "../context/Store";
 
 const Home = () => {
+    const { setNavLinkActiveName } = useContext(GlobalContext);
     useEffect(() => {
+        setNavLinkActiveName("/");
         document.title = `${myInformation.aboutSection.iAmWhat} | Home`;
     }, []);
     return (

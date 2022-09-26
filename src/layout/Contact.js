@@ -1,24 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 // ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
+import { GlobalContext } from "../context/Store";
 
 // ✅ Data ------------------------------------------------------------------------------------------------------------
 import myInformation from "../data/myInformation";
 
 const Contact = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    const { setNavLinkActiveName } = useContext(GlobalContext);
+
     useEffect(() => {
+        setNavLinkActiveName("contact");
         document.title = `${myInformation.aboutSection.iAmWhat} | Contact`;
     }, []);
     return (
         <div
             className={`section_background_gradient box-border flex h-auto w-full flex-col items-center px-8 pt-16 pb-10 sm:px-12 md:flex-col lg:px-16 ${paddingTopToDiffer} ${heightToDiffer}`}
         >
-            <SectionTitle title={"Contact with,Me"} />
+            <SectionTitle title={"Get in,Touch"} />
 
             <div className="mt-5 flex h-full w-full flex-col rounded-lg bg-[rgba(255,255,255,0.3)] pt-10 pb-6 md:flex-row md:pt-14">
                 <div className="hidden h-full w-full items-center justify-center md:flex md:h-full md:w-1/2">
-                    <img className="w-[50%] min-w-[220px]" src="./Images/Contact/contact-1.png" alt="" />
+                    <img className="w-[50%] min-w-[220px]" src="./Images/Contact/contact-1.png" alt="NONE" />
                 </div>
 
                 <div className="box-border flex h-full w-full flex-col items-center gap-6 rounded-lg px-6 transition-all duration-300 md:w-1/2 md:gap-7 md:px-10">

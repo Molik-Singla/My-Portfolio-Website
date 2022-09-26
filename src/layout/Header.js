@@ -32,9 +32,11 @@ const Header = () => {
     return (
         <>
             <div className="fixed top-0 z-50 flex h-14 w-full items-center justify-between overflow-hidden bg-secondary-color px-5 text-white md:px-12 lg:px-16">
-                <div className="logo">
-                    <img src="./Images/Logo.png" alt="" />
-                </div>
+                <NavLink to="">
+                    <div className="logo cursor-pointer">
+                        <img src="./Images/Logo.png" alt="NONE" />
+                    </div>
+                </NavLink>
                 <div className="navs hidden h-full gap-8 font-open-sans-font text-lg font-medium md:flex md:gap-1">
                     <SingleHeaderNavItem toLink={"/"} headerItemName="Home" />
                     <SingleHeaderNavItem toLink={"about"} headerItemName="About Me" />

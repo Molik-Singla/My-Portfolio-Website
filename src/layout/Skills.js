@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 
 // ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
@@ -7,9 +7,13 @@ import SingleSkill from "../components/SingleSkill";
 // ✅ Data ------------------------------------------------------------------------------------------------------------
 import skillsArray from "./../data/skills";
 import myInformation from "../data/myInformation";
+import { GlobalContext } from "../context/Store";
 
 const Skills = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    const { setNavLinkActiveName } = useContext(GlobalContext);
+
     useEffect(() => {
+        setNavLinkActiveName("skill");
         document.title = `${myInformation.aboutSection.iAmWhat} | Skills`;
     }, []);
     return (

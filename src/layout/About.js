@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 // ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
@@ -8,9 +8,13 @@ import { RiArrowDropRightLine } from "react-icons/ri";
 
 // ✅ Data ------------------------------------------------------------------------------------------------------------
 import myInformation from "../data/myInformation";
+import { GlobalContext } from "../context/Store";
 
 const About = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    const { setNavLinkActiveName } = useContext(GlobalContext);
+
     useEffect(() => {
+        setNavLinkActiveName("about");
         document.title = `${myInformation.aboutSection.iAmWhat} | About`;
     }, []);
     return (
@@ -43,10 +47,12 @@ const About = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
                         {myInformation.aboutSection.aboutMeDescription}
                     </p>
                     <div className="mt-9">
-                        <button className="animate_button_main mt-2 flex items-center justify-center rounded-lg border border-transparent bg-secondary-color px-4 py-1 pl-10 font-rubik-font text-lg text-white shadow-lg hover:border-secondary-color md:mt-1 md:pr-6">
-                            Resume
-                            <RiArrowDropRightLine className="ml-1 text-4xl" />
-                        </button>
+                        <a href={"./resume.pdf"} rel="noopener" target="_blank">
+                            <button className="animate_button_main mt-2 flex items-center justify-center rounded-lg border border-transparent bg-secondary-color px-4 py-1 pl-10 font-rubik-font text-lg text-white shadow-lg hover:border-secondary-color md:mt-1 md:pr-6">
+                                Resume
+                                <RiArrowDropRightLine className="ml-1 text-4xl" />
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

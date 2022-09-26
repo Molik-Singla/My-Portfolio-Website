@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 // ✅ Components ------------------------------------------------------------------------------------------------------------
 import SectionTitle from "../components/SectionTitle";
@@ -7,9 +7,13 @@ import SingleProject from "../components/SingleProject";
 // ✅ Data ------------------------------------------------------------------------------------------------------------
 import allMyProjects from "./../data/projects";
 import myInformation from "../data/myInformation";
+import { GlobalContext } from "../context/Store";
 
 const Project = ({ paddingTopToDiffer = "pt-10", heightToDiffer = "h-auto" }) => {
+    const { setNavLinkActiveName } = useContext(GlobalContext);
+
     useEffect(() => {
+        setNavLinkActiveName("project");
         document.title = `${myInformation.aboutSection.iAmWhat} | Projects`;
     }, []);
     return (
