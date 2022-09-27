@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+
+// ✅ Context ------------------------------------------------------------------------------------------------------------
+import { GlobalContext } from "../context/Store";
+
+// ✅ Components------------------------------------------------------------------------------------------------------------
+import { motion } from "framer-motion";
 
 // ✅ Icons------------------------------------------------------------------------------------------------------------
 import { ImGithub } from "react-icons/im";
 
-const SingleProject = ({ image, projectTitle, projectDescription, githubLink = null, demoLink = null }) => {
+const SingleProject = ({ image, projectTitle, projectDescription, animateDelay, githubLink = null, demoLink = null }) => {
+    // ✅ States / Variables ------------------------------------------------------------------------------------------------------------
+    const { imgAnimationCustom } = useContext(GlobalContext);
+
     return (
-        <div className="single_project flex h-auto w-72 flex-col gap-3 rounded-lg border-2 border-gray-200 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <motion.div
+            {...imgAnimationCustom(0.3, animateDelay)}
+            className="single_project flex h-auto w-72 flex-col gap-3 rounded-lg border-2 border-gray-200 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
             <img className="h-44 rounded-lg object-cover brightness-95 transition-all duration-300 hover:brightness-100" src={image} alt="Project" />
 
             <p className="font-open-sans-font text-xl font-semibold">{projectTitle}</p>
@@ -25,7 +37,7 @@ const SingleProject = ({ image, projectTitle, projectDescription, githubLink = n
                     </button>
                 </a>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

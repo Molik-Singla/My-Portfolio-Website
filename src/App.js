@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
@@ -9,7 +9,7 @@ import Skills from "./layout/Skills";
 import Project from "./layout/Project";
 import Contact from "./layout/Contact";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ErrorPage from "./layout/ErrorPage";
 
 const App = () => {

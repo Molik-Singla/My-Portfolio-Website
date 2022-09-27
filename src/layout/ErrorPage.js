@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
+    // ✅ useEffect ------------------------------------------------------------------------------------------------------------
     useEffect(() => {
         document.title = "Got Lost! Page not Found";
     }, []);
