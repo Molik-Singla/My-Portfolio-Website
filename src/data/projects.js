@@ -34,6 +34,27 @@ const allMyProjects = [
         githubLink: "https://github.com/Molik-Singla/Sign-up-Validation-Page",
         demoLink: "https://molik-singla.github.io/Sign-up-Validation-Page/",
     },
+    {
+        image: "./Images/Projects/project-6.PNG",
+        title: "Hostinger Landing Page",
+        description: "Hostinger landing Page with Signup/ Login and Cart Working.",
+        githubLink: "https://github.com/Molik-Singla/Technical-Thapa-Codefest",
+        demoLink: "https://technical-thapa-codefest.netlify.app/",
+    },
+    {
+        image: "./Images/Projects/project-7.PNG",
+        title: "PropertyBhavan Landing Page",
+        description: "Landing Page of a Properties Selling Website.",
+        githubLink: "https://github.com/Molik-Singla/Property-Site-Landing-Page",
+        demoLink: "https://property-site-landing-page.netlify.app/",
+    },
+    {
+        image: "./Images/Projects/project-8.PNG",
+        title: "Expense Management WebSite",
+        description: "Used to manage your daily expenses by saving it in LocalStorage.",
+        githubLink: "",
+        demoLink: "https://expense-management-app-crud.netlify.app/",
+    },
 ];
 
 export default allMyProjects;
