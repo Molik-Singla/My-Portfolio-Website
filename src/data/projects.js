@@ -2,7 +2,7 @@ const allMyProjects = [
     {
         image: "./Images/Projects/project-1-min.PNG",
         title: "Instagram Clone",
-        description: " A web app for improving online communication experience of us",
+        description: "A web app for improving online communication experience of us",
         githubLink: "",
         demoLink: "https://instagramfullstack.herokuapp.com",
     },
@@ -16,9 +16,16 @@ const allMyProjects = [
     {
         image: "./Images/Projects/project-3-min.png",
         title: "Facebook ( UI Only )",
-        description: " Make an Facebook UI Clone with my mate Prince Verma using HTML and CSS",
+        description: "Make an Facebook UI Clone with my mate Prince Verma using HTML and CSS",
         githubLink: "",
         demoLink: "https://princeverma-ai.github.io/clone-facebook/",
+    },
+    {
+        image: "./Images/Projects/project-6-min.PNG",
+        title: "Hostinger Landing Page",
+        description: "Hostinger landing Page with Signup/ Login and Cart Working.",
+        githubLink: "https://github.com/Molik-Singla/Technical-Thapa-Codefest",
+        demoLink: "https://technical-thapa-codefest.netlify.app/",
     },
     {
         image: "./Images/Projects/project-4-min.jpeg",
@@ -34,13 +41,7 @@ const allMyProjects = [
         githubLink: "https://github.com/Molik-Singla/Sign-up-Validation-Page",
         demoLink: "https://molik-singla.github.io/Sign-up-Validation-Page/",
     },
-    {
-        image: "./Images/Projects/project-6-min.PNG",
-        title: "Hostinger Landing Page",
-        description: "Hostinger landing Page with Signup/ Login and Cart Working.",
-        githubLink: "https://github.com/Molik-Singla/Technical-Thapa-Codefest",
-        demoLink: "https://technical-thapa-codefest.netlify.app/",
-    },
+
     {
         image: "./Images/Projects/project-7-min.PNG",
         title: "PropertyBhavan Landing Page",

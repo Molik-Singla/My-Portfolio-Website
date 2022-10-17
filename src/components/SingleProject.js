@@ -20,9 +20,11 @@ const SingleProject = ({ image, projectTitle, projectDescription, animateDelay, 
         >
             <img className="h-40 rounded-lg object-cover brightness-95 transition-all duration-300 hover:brightness-100" src={image} alt="Project" />
 
-            <p className="font-open-sans-font text-xl font-semibold">{projectTitle}</p>
+            <p className="font-open-sans-font text-xl font-semibold">
+                {projectTitle?.length > 19 ? `${projectTitle.slice(0, 19)}...` : `${projectTitle}.`}
+            </p>
             <p className="font-open-sans-font text-base font-medium">
-                {projectDescription?.length > 55 ? `${projectDescription.slice(1, 55)}...` : `${projectDescription}.`}
+                {projectDescription?.length > 55 ? `${projectDescription.slice(0, 55)}...` : `${projectDescription}.`}
             </p>
             <div className="project_links mt-3 flex gap-4">
                 <a rel="noopener" className={`${!githubLink && "hover:cursor-not-allowed"}`} href={githubLink} target="_blank">
