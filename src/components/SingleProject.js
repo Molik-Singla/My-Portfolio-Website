@@ -18,7 +18,7 @@ const SingleProject = ({ image, projectTitle, projectDescription, animateDelay, 
             {...imgAnimationCustom(0.3, animateDelay)}
             className="single_project flex h-auto w-72 flex-col gap-3 rounded-lg border-2 border-gray-200 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
         >
-            <img className="h-44 rounded-lg object-cover brightness-95 transition-all duration-300 hover:brightness-100" src={image} alt="Project" />
+            <img className="h-40 rounded-lg object-cover brightness-95 transition-all duration-300 hover:brightness-100" src={image} alt="Project" />
 
             <p className="font-open-sans-font text-xl font-semibold">{projectTitle}</p>
             <p className="font-open-sans-font text-base font-medium">
